@@ -15,3 +15,15 @@ variable "domain_name" {
   description = "Domain name for the S3 bucket"
   type        = string
 }
+
+variable "default_root_object" {
+  description = "Name of default root object for website"
+  type = string
+  default = "index.html" 
+}
+
+variable "is_ipv6_enabled" {
+  description = "Wether IP v6 is enabled"
+  type = bool
+  default = true
+}

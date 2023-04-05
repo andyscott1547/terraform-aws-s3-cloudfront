@@ -103,10 +103,10 @@ resource "aws_cloudfront_distribution" "this" {
   }
 
   # By default, show index.html file
-  default_root_object = "index.html"
-  enabled             = true
-  is_ipv6_enabled     = true
-  aliases             = [var.domain_name, "www.${var.domain_name}", "dev.${var.domain_name}"]
+  default_root_object = var.default_root_object
+  enabled             = var.distribution_enabled
+  is_ipv6_enabled     = var.is_ipv6_enabled
+  aliases             = [var.domain_name]
 
   default_cache_behavior {
     compress = true

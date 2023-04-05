@@ -6,6 +6,7 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
+      alconfiguration_aliases = [ aws.global ]
     }
   }
 }
